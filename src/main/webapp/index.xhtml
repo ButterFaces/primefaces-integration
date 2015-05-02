@@ -1,0 +1,32 @@
+<ui:composition template="/WEB-INF/templates/base.xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:b="http://butterfaces.larmic.de/components" xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:define name="content">
+
+
+        <h:form styleClass="container" style="padding-top: 20px">
+
+            <div class="alert alert-success">
+                Testing PrimeFaces and ButterFaces integration. Using b:labeledContainer with p:spinner.
+            </div>
+
+            <b:labeledContainer label="input">
+                <p:spinner id="ajaxSpinner" value="#{demo.number}">
+                    <p:ajax update="ajaxSpinnerValue" process="@this"/>
+                </p:spinner>
+            </b:labeledContainer>
+
+            <b:labeledContainer label="output">
+                <h:outputText id="ajaxSpinnerValue" value="#{demo.number}"/>
+            </b:labeledContainer>
+
+
+        </h:form>
+
+        <b:activateLibraries/>
+
+    </ui:define>
+
+</ui:composition>
