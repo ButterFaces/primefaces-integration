@@ -25,7 +25,7 @@
 
     <context-param>
         <param-name>de.larmic.butterfaces.provideJQuery</param-name>
-        <param-value>false</param-value>
+        <param-value>true</param-value>
     </context-param>
     <context-param>
         <param-name>de.larmic.butterfaces.useCompressedResources</param-name>
