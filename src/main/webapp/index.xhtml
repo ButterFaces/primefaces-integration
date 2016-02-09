@@ -6,22 +6,25 @@
 
     <ui:define name="content">
 
-
         <h:form styleClass="container" style="padding-top: 20px">
 
             <div class="alert alert-success">
                 Testing PrimeFaces and ButterFaces integration. Using b:labeledContainer with p:spinner.
             </div>
 
-            <b:labeledContainer label="input">
-                <p:spinner id="ajaxSpinner" value="#{demo.number}">
-                    <p:ajax update="ajaxSpinnerValue" process="@this"/>
-                </p:spinner>
-            </b:labeledContainer>
+            <div class="row">
+                <div class="col-md-6">
+                    <b:labeledContainer label="input">
+                        <p:spinner id="ajaxSpinner" value="#{demo.number}">
+                            <p:ajax update="ajaxSpinnerValue" process="@this"/>
+                        </p:spinner>
+                    </b:labeledContainer>
 
-            <b:labeledContainer label="output">
-                <h:outputText id="ajaxSpinnerValue" value="#{demo.number}"/>
-            </b:labeledContainer>
+                    <b:labeledContainer label="output">
+                        <h:outputText id="ajaxSpinnerValue" value="#{demo.number}"/>
+                    </b:labeledContainer>
+                </div>
+            </div>
 
         </h:form>
 
