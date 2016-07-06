@@ -2,6 +2,9 @@
 
 As well as ButterFaces [PrimeFaces](http://www.primefaces.org/) comes with jQuery. This does not work out of the box.
 
+## Update
+With ButterFaces 2.1.8 no additional configuration is needed. It just works out-of-the-box. For further version look below.
+
 ## Problem
 ButterFaces deliveres css and javascript as first part of html head to allow custom class handling. PrimeFaces deliveres its own jQuery after ButterFaces, so ButterFaces jQuery plugins does not work anymore.
 
