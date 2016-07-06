@@ -54,3 +54,8 @@ Activate it in your `faces-config.xml`
 
 </faces-config>
 ```
+
+## Start showcase
+```
+mvn clean package wildfly-swarm:run
+```
