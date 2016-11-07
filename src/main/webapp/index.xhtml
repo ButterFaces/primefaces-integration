@@ -14,7 +14,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <b:labeledContainer label="input">
                         <p:spinner id="ajaxSpinner" value="#{demo.number}">
                             <p:ajax update="ajaxSpinnerValue" process="@this"/>
@@ -25,9 +25,9 @@
                         <h:outputText id="ajaxSpinnerValue" value="#{demo.number}"/>
                     </b:labeledContainer>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <b:text id="text"
-                            label="label"
+                            label="text"
                             value="#{demo.value}"
                             placeholder="begin with typing test...">
                         <f:ajax event="keyup"
@@ -40,6 +40,16 @@
                     </b:text>
                     <b:labeledContainer label="output">
                         <h:outputText id="autoCompleteValue" value="#{demo.value}"/>
+                    </b:labeledContainer>
+                </div>
+                <div class="col-md-4">
+                    <b:tags label="tags" value="#{demo.tags}">
+                        <f:ajax event="change"
+                                execute="@this"
+                                render="tagValues" />
+                    </b:tags>
+                    <b:labeledContainer label="output">
+                        <h:outputText id="tagValues" value="#{demo.tags}"/>
                     </b:labeledContainer>
                 </div>
             </div>

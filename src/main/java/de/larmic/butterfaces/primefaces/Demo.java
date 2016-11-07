@@ -17,6 +17,7 @@ public class Demo implements Serializable {
 
     private final List<String> autoCompleteValues = new ArrayList<String>();
     private String value;
+    private String tags;
     private int number;
 
     @PostConstruct
@@ -67,5 +68,13 @@ public class Demo implements Serializable {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
     }
 }
